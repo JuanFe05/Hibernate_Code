@@ -86,6 +86,7 @@ El archivo de persistencia típicamente se llama **"persistence.xml"** o **"hibe
     </properties>
   </persistence-unit>
 </persistence>
+```
 
 ## Persistence.xml (JakartaEE 9)
 
@@ -107,7 +108,7 @@ El archivo de persistencia típicamente se llama **"persistence.xml"** o **"hibe
     </properties>
   </persistence-unit>
 </persistence>
-  ```
+```
 
 ## hibernate.cfg.xml
 
