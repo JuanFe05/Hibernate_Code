@@ -29,3 +29,36 @@ El patrón **DAO** es muy útil para mejorar la escalabilidad, la mantenibilidad
 El archivo de persistencia es un archivo de configuración en Java que se utiliza en aplicaciones con frameworks de persistencia como **Hibernate**. Este archivo contiene información importante sobre la configuración de la persistencia de datos, como el nombre de la unidad de persistencia, la clase de proveedor de persistencia, las clases de entidades que se deben mapear a la base de datos, las propiedades de conexión a la base de datos, entre otros.
 
 El archivo de persistencia típicamente se llama **"persistence.xml"** o **"hibernate.cfg.xml"** y se encuentra en el directorio "META-INF" dentro del paquete de la aplicación. La información especificada en este archivo se utiliza por el **framework** de persistencia para realizar las operaciones de persistencia en la base de datos de manera transparente para el programador.
+
+### Persistence.xml (JavaEE 8)
+
+### Persistence.xml (JakartaEE 9)
+
+### hibernate.cfg.xml
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <!-- Database connection settings -->
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="connection.url">jdbc:mysql://localhost:3306/testdb</property>
+    <property name="connection.username">root</property>
+    <property name="connection.password">password</property>
+
+    <!-- Hibernate properties -->
+    <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hbm2ddl.auto">update</property>
+    <property name="show_sql">true</property>
+    <property name="format_sql">true</property>
+    <property name="use_sql_comments">true</property>
+
+    <!-- Mapping classes -->
+    <mapping class="com.example.Entity"/>
+    <mapping class="com.example.AnotherEntity"/>
+  </session-factory>
+</hibernate-configuration>
+  ```
