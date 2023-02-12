@@ -34,6 +34,26 @@ El archivo de persistencia típicamente se llama **"persistence.xml"** o **"hibe
 
 ### Persistence.xml (JakartaEE 9)
 
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://jakarta.ee/xml/ns/persistence" version="3.0">
+
+  <persistence-unit name="jpa-persistence-unit">
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <class>com.example.Entity</class>
+    <class>com.example.AnotherEntity</class>
+    <properties>
+      <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+      <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/testdb"/>
+      <property name="jakarta.persistence.jdbc.user" value="root"/>
+      <property name="jakarta.persistence.jdbc.password" value="password"/>  
+      <property name="hibernate.show_sql" value="true"/>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+    </properties>
+  </persistence-unit>
+</persistence>
+  ```
+
 ### hibernate.cfg.xml
 
 ```xml
