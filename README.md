@@ -36,7 +36,7 @@ El archivo de persistencia típicamente se llama **"persistence.xml"** o **"hibe
 
 ### hibernate.cfg.xml
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-configuration PUBLIC
         "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
