@@ -43,20 +43,20 @@ El archivo de persistencia típicamente se llama **"persistence.xml"** o **"hibe
         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
   <session-factory>
-    <!-- Database connection settings -->
+    <!-- Configuración de la conexión a BD -->
     <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
     <property name="connection.url">jdbc:mysql://localhost:3306/testdb</property>
     <property name="connection.username">root</property>
     <property name="connection.password">password</property>
 
-    <!-- Hibernate properties -->
+    <!-- Propiedades de Hibernate -->
     <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="hbm2ddl.auto">update</property>
     <property name="show_sql">true</property>
     <property name="format_sql">true</property>
     <property name="use_sql_comments">true</property>
 
-    <!-- Mapping classes -->
+    <!-- Mapeo de Clases -->
     <mapping class="com.example.Entity"/>
     <mapping class="com.example.AnotherEntity"/>
   </session-factory>
