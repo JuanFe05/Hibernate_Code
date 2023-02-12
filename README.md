@@ -32,6 +32,61 @@ El archivo de persistencia típicamente se llama **"persistence.xml"** o **"hibe
 
 ### Persistence.xml (JavaEE 8)
 
+- **Usando Javax**
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+             version="2.1">
+
+  <persistence-unit name="hibernate-persistence-unit">
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <class>com.example.Entity</class>
+    <class>com.example.AnotherEntity</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/testdb"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.password" value="password"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+      <property name="hibernate.show_sql" value="true"/>
+      <property name="hibernate.format_sql" value="true"/>
+    </properties>
+  </persistence-unit>
+</persistence>
+```
+
+- **Usando Hibernate.**
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://www.hibernate.org/xsd/hibernate-persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.hibernate.org/xsd/hibernate-persistence
+             http://www.hibernate.org/xsd/hibernate-persistence.xsd"
+             version="3.0">
+ 
+  <persistence-unit name="hibernate-persistence-unit">
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <class>com.example.Entity</class>
+    <class>com.example.AnotherEntity</class>
+    <properties>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+      <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+      <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/testdb"/>
+      <property name="hibernate.connection.username" value="root"/>
+      <property name="hibernate.connection.password" value="password"/>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+      <property name="hibernate.show_sql" value="true"/>
+      <property name="hibernate.format_sql" value="true"/>
+    </properties>
+  </persistence-unit>
+</persistence>
+
 ### Persistence.xml (JakartaEE 9)
 
 ```xml
