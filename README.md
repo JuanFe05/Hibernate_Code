@@ -30,7 +30,7 @@ El archivo de persistencia es un archivo de configuración en Java que se utiliz
 
 El archivo de persistencia típicamente se llama **"persistence.xml"** o **"hibernate.cfg.xml"** y se encuentra en el directorio "META-INF" dentro del paquete de la aplicación. La información especificada en este archivo se utiliza por el **framework** de persistencia para realizar las operaciones de persistencia en la base de datos de manera transparente para el programador.
 
-### Persistence.xml (JavaEE 8)
+## Persistence.xml (JavaEE 8)
 
 - **Usando Javax**
 
@@ -87,7 +87,7 @@ El archivo de persistencia típicamente se llama **"persistence.xml"** o **"hibe
   </persistence-unit>
 </persistence>
 
-### Persistence.xml (JakartaEE 9)
+## Persistence.xml (JakartaEE 9)
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -109,7 +109,7 @@ El archivo de persistencia típicamente se llama **"persistence.xml"** o **"hibe
 </persistence>
   ```
 
-### hibernate.cfg.xml
+## hibernate.cfg.xml
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
