@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JpbDataSourceConfig">
+    <data-sources>
+      <data-source id="589d53db-f07c-4821-89f0-b3e927de2314" name="PruebaHibernate" url="jdbc:mysql://127.0.0.1/pruebashibernate?useSSL=false&amp;allowMultiQueries=true&amp;serverTimezone=UTC" driverClass="com.mysql.cj.jdbc.Driver" />
+    </data-sources>
+    <data-source-infos>
+      <data-source-info id="589d53db-f07c-4821-89f0-b3e927de2314" persistence-unit-name="PruebaHibernatePU" />
+      <data-source-info id="589d53db-f07c-4821-89f0-b3e927de2314" persistence-unit-name="PruebaHibernate" />
+      <data-source-info id="589d53db-f07c-4821-89f0-b3e927de2314" persistence-unit-name="pruebaJPA" />
+      <data-source-info id="589d53db-f07c-4821-89f0-b3e927de2314" persistence-unit-name="ejemploJPA" />
+    </data-source-infos>
+  </component>
+</project>

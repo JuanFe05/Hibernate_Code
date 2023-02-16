@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+             version="2.1">
+
+    <persistence-unit name="ejemploJPA" transaction-type="RESOURCE_LOCAL">
+
+        <!-- El elemento <provider> especifica el proveedor de persistencia a utilizar, en este caso Hibernate. -->
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <!-- Los elementos <class> especifican las clases de entidades que se incluirán en la unidad de persistencia. -->
+        <class>persistence.Persona</class>
+
+        <properties>
+            <!-- hibernate.dialect: especifica el dialecto de SQL a utilizar. -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+
+            <!-- hibernate.connection.driver_class: especifica la clase del controlador de conexión a utilizar. -->
+            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+
+            <!-- hibernate.connection.url: especifica la URL de la base de datos. -->
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/pruebashibernate"/>
+
+            <!-- hibernate.connection.username: especifica el nombre de usuario de la base de datos. -->
+            <property name="hibernate.connection.username" value="root"/>
+
+            <!-- hibernate.connection.password: especifica la contraseña de la base de datos. -->
+            <property name="hibernate.connection.password" value="12345"/>
+
+            <!-- hibernate.hbm2ddl.auto: especifica el modo de generación de la estructura de la base de datos. -->
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+
+            <!-- hibernate.show_sql: específica si se deben mostrar las sentencias SQL en la consola. -->
+            <property name="hibernate.show_sql" value="true"/>
+
+            <!-- hibernate.format_sql: específica si se deben formatear las sentencias SQL en la consola. -->
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>
